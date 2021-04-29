@@ -1,0 +1,89 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link
+      rel="stylesheet"
+      href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css"
+    />
+    <link
+      href="https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css"
+      rel="stylesheet"
+    />
+    <link
+      rel="stylesheet"
+      href="https://unpkg.com/@tailwindcss/typography@0.2.x/dist/typography.min.css"
+    />
+
+    <link rel="stylesheet" href="./css/dist/style.css" />
+    <title>Just a music player</title>
+  </head>
+  <body class="flex container justify-center mx-auto my-auto">
+    <div
+      class="flex flex-col w-96 h-screen max-w-screen-lg bg-gradient-to-b from-blue-400 to-blue-100"
+    >
+      <div class="flex w-full justify-center items-center my-20">
+        <h1 class="text-3xl text-white uppercase">Just a music player</h1>
+      </div>
+      <div
+        class="music-container flex flex-col bg-gray-50 bg-opacity-10 mx-12 rounded-2xl shadow-xl backdrop-filter backdrop-blur-lg"
+      >
+        <div>
+          <audio src="./music/write-your-story.mp3" id="audio"></audio>
+          <div
+            class="flex justify-center object-contain m-1 p-1 img-container transition ease-in-out"
+          >
+            <img
+              src="./img/write-your-story.jpg"
+              alt="Title"
+              id="cover"
+              class="rounded-full w-48 h-48"
+            />
+          </div>
+          <div class="flex justify-center m-2">
+            <div class="text-center w-40 truncate">
+              <h1 id="title" class="text-xl">write-your-story</h1>
+            </div>
+          </div>
+
+          <div class="flex h-6">
+            <div
+              id="progress-container"
+              class="relative flex h-1 w-full m-2 bg-gray-50"
+            >
+              <div
+                id="progress-line"
+                class="absolute flex h-1 bg-blue-300"
+              ></div>
+              <div
+                id="progress"
+                class="absolute h-4 w-4 rounded-full bg-blue-200 -top-1"
+              ></div>
+            </div>
+          </div>
+        </div>
+
+        <div class="flex justify-around m-2">
+          <div>
+            <button id="prev" class="">
+              <i class="fas fa-backward"> </i>
+            </button>
+          </div>
+          <div>
+            <button id="play" class="">
+              <i class="fas fa-play"> </i>
+            </button>
+          </div>
+          <div>
+            <button id="next" class="">
+              <i class="fas fa-forward"> </i>
+            </button>
+          </div>
+        </div>
+      </div>
+    </div>
+    <script src="js/dist/script.js"></script>
+  </body>
+</html>
